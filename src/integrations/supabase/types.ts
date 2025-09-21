@@ -488,79 +488,139 @@ export type Database = {
       subscribers: {
         Row: {
           bounce_count: number | null
+          city: string | null
           click_count: number | null
+          clinic_name: string | null
+          confirmation_token: string | null
+          confirmed_at: string | null
           created_at: string
           custom_fields: Json | null
           email: string
+          engagement_score: number | null
           first_name: string | null
+          graduation_year: number | null
           id: string
           last_clicked_at: string | null
+          last_email_opened_at: string | null
           last_name: string | null
           last_opened_at: string | null
+          license_number: string | null
+          notes: string | null
           open_count: number | null
+          phone: string | null
+          practice_type: string | null
+          preferred_email_frequency: string | null
+          state: string | null
           status: Database["public"]["Enums"]["subscriber_status"]
           subscribed_at: string | null
           tags: string[] | null
+          total_clicks: number | null
+          total_opens: number | null
+          unsubscribe_token: string | null
           unsubscribed_at: string | null
           updated_at: string
+          zip_code: string | null
         }
         Insert: {
           bounce_count?: number | null
+          city?: string | null
           click_count?: number | null
+          clinic_name?: string | null
+          confirmation_token?: string | null
+          confirmed_at?: string | null
           created_at?: string
           custom_fields?: Json | null
           email: string
+          engagement_score?: number | null
           first_name?: string | null
+          graduation_year?: number | null
           id?: string
           last_clicked_at?: string | null
+          last_email_opened_at?: string | null
           last_name?: string | null
           last_opened_at?: string | null
+          license_number?: string | null
+          notes?: string | null
           open_count?: number | null
+          phone?: string | null
+          practice_type?: string | null
+          preferred_email_frequency?: string | null
+          state?: string | null
           status?: Database["public"]["Enums"]["subscriber_status"]
           subscribed_at?: string | null
           tags?: string[] | null
+          total_clicks?: number | null
+          total_opens?: number | null
+          unsubscribe_token?: string | null
           unsubscribed_at?: string | null
           updated_at?: string
+          zip_code?: string | null
         }
         Update: {
           bounce_count?: number | null
+          city?: string | null
           click_count?: number | null
+          clinic_name?: string | null
+          confirmation_token?: string | null
+          confirmed_at?: string | null
           created_at?: string
           custom_fields?: Json | null
           email?: string
+          engagement_score?: number | null
           first_name?: string | null
+          graduation_year?: number | null
           id?: string
           last_clicked_at?: string | null
+          last_email_opened_at?: string | null
           last_name?: string | null
           last_opened_at?: string | null
+          license_number?: string | null
+          notes?: string | null
           open_count?: number | null
+          phone?: string | null
+          practice_type?: string | null
+          preferred_email_frequency?: string | null
+          state?: string | null
           status?: Database["public"]["Enums"]["subscriber_status"]
           subscribed_at?: string | null
           tags?: string[] | null
+          total_clicks?: number | null
+          total_opens?: number | null
+          unsubscribe_token?: string | null
           unsubscribed_at?: string | null
           updated_at?: string
+          zip_code?: string | null
         }
         Relationships: []
       }
       suppression_list: {
         Row: {
+          added_at: string | null
+          campaign_id: string | null
           created_at: string
           email: string
           id: string
+          notes: string | null
           reason: Database["public"]["Enums"]["suppression_reason"]
           suppression_type: string | null
         }
         Insert: {
+          added_at?: string | null
+          campaign_id?: string | null
           created_at?: string
           email: string
           id?: string
+          notes?: string | null
           reason: Database["public"]["Enums"]["suppression_reason"]
           suppression_type?: string | null
         }
         Update: {
+          added_at?: string | null
+          campaign_id?: string | null
           created_at?: string
           email?: string
           id?: string
+          notes?: string | null
           reason?: Database["public"]["Enums"]["suppression_reason"]
           suppression_type?: string | null
         }
@@ -595,37 +655,64 @@ export type Database = {
       }
       templates: {
         Row: {
+          avg_open_rate: number | null
+          category: string | null
           content: string | null
+          content_html: string | null
+          content_json: Json | null
           created_at: string
           description: string | null
           html_content: string | null
           id: string
+          is_starter_template: boolean | null
           is_system: boolean | null
           name: string
+          preview_text_template: string | null
+          subject_template: string | null
           thumbnail_url: string | null
+          times_used: number | null
           updated_at: string
+          variables: string[] | null
         }
         Insert: {
+          avg_open_rate?: number | null
+          category?: string | null
           content?: string | null
+          content_html?: string | null
+          content_json?: Json | null
           created_at?: string
           description?: string | null
           html_content?: string | null
           id?: string
+          is_starter_template?: boolean | null
           is_system?: boolean | null
           name: string
+          preview_text_template?: string | null
+          subject_template?: string | null
           thumbnail_url?: string | null
+          times_used?: number | null
           updated_at?: string
+          variables?: string[] | null
         }
         Update: {
+          avg_open_rate?: number | null
+          category?: string | null
           content?: string | null
+          content_html?: string | null
+          content_json?: Json | null
           created_at?: string
           description?: string | null
           html_content?: string | null
           id?: string
+          is_starter_template?: boolean | null
           is_system?: boolean | null
           name?: string
+          preview_text_template?: string | null
+          subject_template?: string | null
           thumbnail_url?: string | null
+          times_used?: number | null
           updated_at?: string
+          variables?: string[] | null
         }
         Relationships: []
       }
@@ -633,24 +720,33 @@ export type Database = {
         Row: {
           created_at: string
           interest_level: string | null
+          notes: string | null
           registered: boolean | null
           registered_at: string | null
+          registration_date: string | null
+          source_campaign_id: string | null
           subscriber_id: string
           workshop_id: string
         }
         Insert: {
           created_at?: string
           interest_level?: string | null
+          notes?: string | null
           registered?: boolean | null
           registered_at?: string | null
+          registration_date?: string | null
+          source_campaign_id?: string | null
           subscriber_id: string
           workshop_id: string
         }
         Update: {
           created_at?: string
           interest_level?: string | null
+          notes?: string | null
           registered?: boolean | null
           registered_at?: string | null
+          registration_date?: string | null
+          source_campaign_id?: string | null
           subscriber_id?: string
           workshop_id?: string
         }
@@ -676,46 +772,82 @@ export type Database = {
           capacity: number | null
           created_at: string
           current_registrations: number | null
+          date: string | null
           description: string | null
           duration_minutes: number | null
+          early_bird_deadline: string | null
+          early_bird_price: number | null
+          end_date: string | null
           id: string
-          instructor_name: string | null
+          image_url: string | null
+          instructor: string | null
           is_active: boolean | null
+          learning_objectives: string[] | null
+          location_address: string | null
+          location_map_url: string | null
+          location_name: string | null
+          materials_included: string[] | null
+          name: string
           price: number | null
           registration_url: string | null
-          title: string
+          spots_remaining: number | null
+          timezone: string | null
+          type: string | null
           updated_at: string
-          workshop_date: string | null
         }
         Insert: {
           capacity?: number | null
           created_at?: string
           current_registrations?: number | null
+          date?: string | null
           description?: string | null
           duration_minutes?: number | null
+          early_bird_deadline?: string | null
+          early_bird_price?: number | null
+          end_date?: string | null
           id?: string
-          instructor_name?: string | null
+          image_url?: string | null
+          instructor?: string | null
           is_active?: boolean | null
+          learning_objectives?: string[] | null
+          location_address?: string | null
+          location_map_url?: string | null
+          location_name?: string | null
+          materials_included?: string[] | null
+          name: string
           price?: number | null
           registration_url?: string | null
-          title: string
+          spots_remaining?: number | null
+          timezone?: string | null
+          type?: string | null
           updated_at?: string
-          workshop_date?: string | null
         }
         Update: {
           capacity?: number | null
           created_at?: string
           current_registrations?: number | null
+          date?: string | null
           description?: string | null
           duration_minutes?: number | null
+          early_bird_deadline?: string | null
+          early_bird_price?: number | null
+          end_date?: string | null
           id?: string
-          instructor_name?: string | null
+          image_url?: string | null
+          instructor?: string | null
           is_active?: boolean | null
+          learning_objectives?: string[] | null
+          location_address?: string | null
+          location_map_url?: string | null
+          location_name?: string | null
+          materials_included?: string[] | null
+          name?: string
           price?: number | null
           registration_url?: string | null
-          title?: string
+          spots_remaining?: number | null
+          timezone?: string | null
+          type?: string | null
           updated_at?: string
-          workshop_date?: string | null
         }
         Relationships: []
       }
